@@ -1,9 +1,27 @@
+
+#datastructure:
+
+Before doing any model work, we need to prepare for the data.
+The usual data structure is a dataframe containing a bunch of numerical and categorical columns.
+
+There is not baseline summarisation needed before plotting.
+
+Plotting is extremely important to uncover the correlation and the trend of the data
+
+Most common plots probably include: 
+	histogram, scatterplot, time series etc
+
 #qplot:
 
-This function allows you to uncover some basic plotting power of ggplot2.
-Here is the function: 
+qplot() function can be used to create the most common graph types. While it does not expose ggplot's full power, it can create a very wide range of useful plots. The format is
+
 	qplot(x, y, data=, color=, shape=, size=, alpha=, geom=, method=, formula=, facets=, xlim=, ylim= xlab=, ylab=, main=, sub=)
+
+The explanation of the notations:
 
 	x and y represent the x and y axis. For univariate data, like histogram, we dont need y because y will be count of the rows.
 
-	
+	alpha: transparency for overlapping elements expressed as a fraction between 0 (complete transparency) and 1 (complete opacity)
+
+	Associates the levels of variable with symbol color, shape, or size. For line plots, color associates levels of a variable with line color. For density and box plots, fill associates fill colors with a variable. Legends are drawn automatically.
+
