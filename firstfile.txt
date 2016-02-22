@@ -1,4 +1,9 @@
 #qplot:
 
-This function allows you to uncover some basic plotting power of ggplot2
+This function allows you to uncover some basic plotting power of ggplot2.
+Here is the function: 
+	qplot(x, y, data=, color=, shape=, size=, alpha=, geom=, method=, formula=, facets=, xlim=, ylim= xlab=, ylab=, main=, sub=)
 
+	x and y represent the x and y axis. For univariate data, like histogram, we dont need y because y will be count of the rows.
+
+	
