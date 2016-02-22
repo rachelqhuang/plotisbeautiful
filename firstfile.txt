@@ -1,15 +1,25 @@
 
+#part one:
+
 #datastructure:
 
 Before doing any model work, we need to prepare for the data.
 The usual data structure is a dataframe containing a bunch of numerical and categorical columns.
+
+iris dataset
+the shape of the dataset is that each column will be one type of element, no transposed table, no horizontal shape
+Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
 
 There is not baseline summarisation needed before plotting.
 
 Plotting is extremely important to uncover the correlation and the trend of the data
 
 Most common plots probably include: 
-	histogram, scatterplot, time series etc
+	histogram for distribution, bar chart for usual $ or quantity summarisation, grouped bar chart, scatterplot for correlation, time series for trend over time, boxplot for distribution etc
 
 #qplot:
 
@@ -19,9 +29,34 @@ qplot() function can be used to create the most common graph types. While it doe
 
 The explanation of the notations:
 
-	x and y represent the x and y axis. For univariate data, like histogram, we dont need y because y will be count of the rows.
+	x and y represent the horizontal and vertical axis. For univariate data, like histogram, we dont need y because y will be count of the rows.
 
 	alpha: transparency for overlapping elements expressed as a fraction between 0 (complete transparency) and 1 (complete opacity)
 
 	Associates the levels of variable with symbol color, shape, or size. For line plots, color associates levels of a variable with line color. For density and box plots, fill associates fill colors with a variable. Legends are drawn automatically.
+
+	data: specifies a dataframe
+
+	facets: Creates a trellis graph (multiple graphs on multiple panels rather than on one panel) by specifying conditioning variables. Its value is expressed as rowvar ~ colvar. To create trellis graphs based on a single conditioning variable, use rowvar~. or .~colvar).For example, sales by country, each graph will be one country
+
+	geom: object shape of plot. The geom option is expressed as a character vector with one or more entries. geom values include "point", "smooth", "boxplot", "line", "histogram", "density", "bar", and "jitter".
+
+	main & sub: Character vectors specifying the title and subtitle
+
+	method & formula:
+	If geom="smooth", a loess fit line and confidence limits are added by default. When the number of observations is greater than 1,000, a more efficient smoothing algorithm is employed. Methods include "lm" for regression, "gam" for generalized additive models, and "rlm" for robust regression. The formula parameter gives the form of the fit. 
+
+	For example, to add simple linear regression lines, you'd specify geom="smooth", method="lm", formula=y~x. Changing the formula to y~poly(x,2) would produce a quadratic fit. Note that the formula uses the letters x and y, not the names of the variables. 
+
+	For method="gam", be sure to load the mgcv package. For method="rml", load the MASS package
+
+	xlab & ylab: character vector for x and y axis names
+
+	xlim & ylim: two-element numeric vectors giving the minimum and maximum values for the horizontal and vertical axes, respectively
+
+#################go to example qplot for some examples#############	
+
+#part two:
+
+#ggplot
 
