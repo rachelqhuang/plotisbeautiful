@@ -59,6 +59,8 @@ qplot(ID,extra,data = sleep, geom = c("boxplot","jitter"), fill = ID, main = "sl
 #barplot
 #more complicated
 #barplot with y summed rather than counted
+#summarise data to the level of your groups have been done. if you want to do by country and by region, your data need to be summarised value by these #two variables. ggplot is only visualise to that level, it will not add things for you
+#this is fundamentally different from doing a histogram
 
 #key: melt data first, then summarise by group
 library(reshape2)
